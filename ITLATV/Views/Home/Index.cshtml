@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" /> <!-- Si tienes un archivo CSS externo -->
+    <style>
+        html {
+            background-color: #0f1720;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 48px;
+        }
+
+        .profile-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .profile-img:hover {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+                border: 3px solid #ffcc00;
+            }
+
+        .plus-icon {
+            margin-left: 20px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+
+            .plus-icon img {
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .plus-icon:hover img {
+                transform: scale(1.1);
+                box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+                border: 3px solid #ffcc00;
+            }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            white-space: nowrap;
+            z-index: 1;
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        .plus-icon:hover .tooltip {
+            visibility: visible;
+        }
+
+        .profile-name {
+            color: #ffcc00;
+            margin-top: 10px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .profile-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       .footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            white-space: nowrap;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Último perfil utilizado:</h1>
+    <div class="profile-container">
+        <div class="profile-wrapper">
+            <div class="profile-content">
+                <a href="@Url.Action("Inicio", "Home")">
+                    <img class="profile-img" src="~/img/profile-pic.jpg" alt="Foto de perfil">
+                </a>
+                <h2 class="profile-name">La para</h2>
+            </div>
+            <div class="plus-icon">
+                <img src="~/img/plusicon.png" alt="Agregar usuario">
+                <div class="tooltip">Esta función aún no está disponible.</div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; @DateTime.Now.Year - ITLA+ - Joel Gil 2022-1070
+    </div>
+</footer>
+</html>
