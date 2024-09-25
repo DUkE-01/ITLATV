@@ -1,0 +1,31 @@
+﻿{
+    ViewData["Title"] = "ITLA+";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7c7dbe6fab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">ITLA+</h2>
+            <nav>
+                <a href="@Url.Action("Inicio", "Home")">Inicio</a>
+                <a href="@Url.Action("Contenido", "Home")">Contenido</a>
+                <a href="@Url.Action("Productora", "Home")" class="activo">Productora</a>
+                <a href="@Url.Action("Generos", "Home")">Géneros</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+    </main>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

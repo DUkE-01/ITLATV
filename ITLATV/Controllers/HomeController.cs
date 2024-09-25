@@ -21,6 +21,18 @@ namespace ITLATV.Controllers
         {
             return View();
         }
+        public IActionResult Contenido()
+        {
+            return View();
+        }
+        public IActionResult Productora()
+        {
+            return View();
+        }
+        public IActionResult Generos()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
